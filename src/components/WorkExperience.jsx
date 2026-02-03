@@ -4,15 +4,22 @@ import { motion } from "framer-motion";
 const experiences = [
   {
     company: "Astrax Private lmt.",
-    role: "Software Developer Intern",
+    role: "Front End Intern",
     duration: "Jan 2025 - Jun 2025",
-    description: "Developed Tracking management system using HTML, CSS, PHP, Javascript.Implemented responsive UI components and integrated REST APIs.",
+    description: "Developed responsive web pages and UI components using HTML, CSS, JavaScript, Bootstrap, and PHP.
+      </br>Collaborated with the team to ensure improved customer experience.
+      </br>Optimized pages for mobile responsiveness, usability, and performance.",
   },
   {
     company: "IPSOS",
     role: "Executive - Data Processing",
     duration: "Jul 2022 - Jan 2024",
-    description: "Performed data cleaning, transformation, and visualization using Python, Excel, SQL and SPSS.Delivered actionable insights for clients.Performed various functions like data cleaning,data handling, transformation and analysis in accordance with Research specification. Delivered tabulation reports with quality checks, ensuring accurate and insightful client-ready outputs. Identified and resolved data discrepancies, maintaining consistency and reliability of insights. Skilfully handled numerous client request and queries, collaborated with clients to understand project objectives, ensuring timely delivery and quality results.",
+    description: "Processed and validated large survey datasets using SPSS with 99% accuracy and GDPR compliance.
+      </br>Delivered 50+ weekly/monthly analytical reports for clients including Netflix, Meta, WD-40, and S&P Global.
+</br>Automated data transformation workflows using SQL queries and Python, reducing manual effort by 30–40%.
+</br>Performed data cleaning, derived variables, executed multi-level tabulations, and resolved discrepancies.
+</br>Collaborated with project managers and client stakeholders to validate reports and ensure timely, accurate delivery.
+</br>Recommended process improvements and contributed to documentation of processes and knowledge transfer activities.
   },
 
 ];
