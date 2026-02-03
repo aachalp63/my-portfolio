@@ -16,7 +16,13 @@ const Navbar = ({ dark, toggleTheme }) => {
       } shadow-md z-50 transition-colors`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+         <div className="flex items-center gap-2">
         {/* Logo / Name */}
+         <img
+    src="/favicon.ico"
+    alt="Aachal Avatar"
+    className="w-8 h-8 rounded-full border border-indigo-400"
+  />
         <h1
           className={`text-2xl font-bold transition-colors ${
             dark
@@ -26,6 +32,7 @@ const Navbar = ({ dark, toggleTheme }) => {
         >
           Aachal's PortFolio
         </h1>
+           </div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-6 font-medium">
