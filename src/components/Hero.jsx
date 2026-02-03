@@ -21,7 +21,7 @@ const Hero = ({ dark }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Hi, I'm Aachal
+        Hi, I'm Aachal Parate
       </motion.h1>
 
       {/* Subheading */}
@@ -33,8 +33,10 @@ const Hero = ({ dark }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        Frontend Developer | React & Tailwind Enthusiast <br />
-        Building clean, modern, and interactive web experiences
+        Frontend Developer || Full Stack Developer (MERN) <br />
+        Developing scalable, production-ready web applications using the MERN stack,
+        with strong focus on clean architecture,RESTful APIs, 
+        JWT authentication, database design, and responsive, component-driven UIs.
       </motion.p>
 
       {/* Button */}
