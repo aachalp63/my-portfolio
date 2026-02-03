@@ -38,8 +38,10 @@ const WorkExperience = ({ dark }) => {
       }`}
     >
       <h2
-        className={`text-4xl font-bold text-center mb-12 ${
-          dark ? "text-indigo-400" : "text-purple-700"
+        className={`text-4xl font-bold text-center mb-12 transition-colors ${
+          dark
+            ? "text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-pink-400 to-yellow-400"
+            : "text-purple-700"
         }`}
       >
         Work Experience
@@ -50,17 +52,48 @@ const WorkExperience = ({ dark }) => {
           <motion.div
             key={index}
             whileHover={{ scale: 1.05, transition: { type: "spring", stiffness: 300 } }}
-            className={`p-6 rounded-xl shadow-lg ${
-              dark ? "bg-gray-800" : "bg-white/80 backdrop-blur-md"
+            className={`p-6 rounded-xl shadow-lg transition-colors ${
+              dark ? "bg-gray-800 hover:bg-gray-700" : "bg-white/80 backdrop-blur-md hover:bg-white/90"
             }`}
           >
-            <h3 className="text-xl font-semibold mb-1">{exp.role}</h3>
-            <p className="text-sm text-gray-400 mb-3">
-              {exp.company} | {exp.duration}
+            <h3
+              className={`text-xl font-semibold mb-1 transition-colors ${
+                dark ? "text-cyan-400" : "text-indigo-600"
+              }`}
+            >
+              {exp.role}
+            </h3>
+            <p
+              className={`text-sm mb-3 ${
+                dark ? "text-gray-300" : "text-gray-600"
+              }`}
+            >
+              <span
+                className={`font-semibold ${
+                  dark ? "text-yellow-400" : "text-purple-500"
+                }`}
+              >
+                {exp.company}
+              </span>{" "}
+              |{" "}
+              <span
+                className={`italic ${
+                  dark ? "text-pink-400" : "text-pink-600"
+                }`}
+              >
+                {exp.duration}
+              </span>
             </p>
-            <ul className="list-disc list-inside space-y-1">
+            <ul className="list-disc list-inside space-y-2">
               {exp.description.map((point, i) => (
-                <li key={i}>{point}</li>
+                <li
+                  key={i}
+                  className={`transition-colors ${
+                    dark ? "text-gray-200 hover:text-yellow-400" : "text-gray-700 hover:text-indigo-500"
+                  }`}
+                >
+                  {point}
+                </li>
               ))}
             </ul>
           </motion.div>
