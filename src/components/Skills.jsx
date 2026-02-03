@@ -21,6 +21,48 @@ import {
 } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 
+// Function to get icon colors
+const getSkillColor = (name, dark) => {
+  switch (name) {
+    case "MongoDB":
+      return dark ? "text-green-500" : "text-green-600";
+    case "React":
+      return dark ? "text-cyan-400" : "text-blue-400";
+    case "JavaScript":
+      return "text-yellow-400";
+    case "HTML":
+      return dark ? "text-orange-400" : "text-orange-500";
+    case "CSS":
+      return dark ? "text-blue-400" : "text-blue-600";
+    case "TailwindCSS":
+      return "text-teal-400";
+    case "Python":
+      return "text-yellow-500";
+    case "Java":
+      return "text-blue-500";
+    case "C":
+      return "text-gray-500";
+    case "PHP":
+      return "text-blue-500";
+    case "MySQL":
+      return dark ? "text-blue-400" : "text-blue-500";
+    case "SPSS":
+      return "text-green-500";
+    case "Power BI":
+      return "text-yellow-500";
+    case "Android":
+      return "text-green-500";
+    case "Git":
+      return "text-red-500";
+    case "GitHub":
+      return dark ? "text-white" : "text-black";
+    case "MS Excel":
+      return "text-green-500";
+    default:
+      return "text-pink-500";
+  }
+};
+
 // Grouped Skills
 const skillGroups = [
   {
@@ -114,7 +156,8 @@ const Skills = ({ dark }) => (
             {group.title}
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 justify-center">
+          {/* Flex container for auto-centering */}
+          <div className="flex flex-wrap justify-center gap-6">
             {group.skills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -132,76 +175,7 @@ const Skills = ({ dark }) => (
                 }`}
               >
                 {React.cloneElement(skill.icon, {
-                  className:
-                    skill.name === "MongoDB"
-                      ? dark
-                        ? "text-green-500"
-                        : "text-green-600"
-                      : skill.name === "React"
-                      ? dark
-                        ? "text-cyan-400"
-                        : "text-blue-400"
-                      : skill.name === "JavaScript"
-                      ? dark
-                        ? "text-yellow-400"
-                        : "text-yellow-400"
-                      : skill.name === "HTML"
-                      ? dark
-                        ? "text-orange-400"
-                        : "text-orange-500"
-                      : skill.name === "CSS"
-                      ? dark
-                        ? "text-blue-400"
-                        : "text-blue-600"
-                      : skill.name === "TailwindCSS"
-                      ? dark
-                        ? "text-teal-400"
-                        : "text-teal-400"
-                      : skill.name === "Python"
-                      ? dark
-                        ? "text-yellow-500"
-                        : "text-yellow-500"
-                      : skill.name === "Java"
-                      ? dark
-                        ? "text-blue-500"
-                        : "text-blue-500"
-                      : skill.name === "C"
-                      ? dark
-                        ? "text-gray-500"
-                        : "text-gray-500"
-                      : skill.name === "PHP"
-                      ? dark
-                        ? "text-blue-500"
-                        : "text-blue-500"
-                      : skill.name === "MySQL"
-                      ? dark
-                        ? "text-blue-400"
-                        : "text-blue-500"
-                      : skill.name === "SPSS"
-                      ? dark
-                        ? "text-green-500"
-                        : "text-green-500"
-                      : skill.name === "Power BI"
-                      ? dark
-                        ? "text-yellow-500"
-                        : "text-yellow-500"
-                      : skill.name === "Android"
-                      ? dark
-                        ? "text-green-500"
-                        : "text-green-500"
-                      : skill.name === "Git"
-                      ? dark
-                        ? "text-red-500"
-                        : "text-red-500"
-                      : skill.name === "GitHub"
-                      ? dark
-                        ? "text-white"
-                        : "text-black"
-                      : skill.name === "MS Excel"
-                      ? dark
-                        ? "text-green-500"
-                        : "text-green-500"
-                      : "text-pink-500",
+                  className: getSkillColor(skill.name, dark),
                 })}
                 <motion.span
                   whileHover={{ scale: 1.15 }}
