@@ -3,39 +3,48 @@ import { motion } from "framer-motion";
 
 const Contact = ({ dark }) => {
   const [msg, setMsg] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMsg("Message sent! (Placeholder)");
-    e.target.reset();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    // Construct mailto link
+    const mailtoLink = `mailto:aachalkparate@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+
+    // Open user's default email client
+    window.location.href = mailtoLink;
+
+    setMsg("Your email client has opened! Please send your message.");
+    form.reset();
   };
 
   return (
     <section
       id="contact"
       className={`min-h-screen px-6 py-20 flex flex-col items-center transition-colors relative overflow-hidden ${
-        dark ? "bg-gray-800" : "bg-gradient-to-br from-green-50 via-indigo-50 to-blue-50"
+        dark
+          ? "bg-gray-800"
+          : "bg-gradient-to-br from-green-50 via-indigo-50 to-blue-50"
       }`}
     >
       {/* Floating shapes */}
-      {dark ? (
-        <>
-          <div className="absolute top-10 left-10 w-48 h-48 rounded-full bg-purple-500/20 filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-16 w-56 h-56 rounded-full bg-pink-500/20 filter blur-3xl animate-pulse"></div>
-        </>
-      ) : (
-        <>
-          <div className="absolute top-10 left-10 w-48 h-48 rounded-full bg-purple-200/30 filter blur-3xl"></div>
-          <div className="absolute bottom-20 right-16 w-56 h-56 rounded-full bg-pink-200/30 filter blur-3xl"></div>
-        </>
-      )}
+      <div
+        className={`absolute top-10 left-10 w-48 h-48 rounded-full ${
+          dark ? "bg-purple-500/20" : "bg-purple-200/30"
+        } filter blur-3xl animate-pulse`}
+      ></div>
+      <div
+        className={`absolute bottom-20 right-16 w-56 h-56 rounded-full ${
+          dark ? "bg-pink-500/20" : "bg-pink-200/30"
+        } filter blur-3xl animate-pulse`}
+      ></div>
 
       {/* Section Heading */}
       <motion.h2
-        className={`text-4xl font-extrabold mb-10 text-center transition-colors ${
-          dark
-            ? "text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400"
-            : "text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400"
-        }`}
+        className="text-4xl font-extrabold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -47,10 +56,8 @@ const Contact = ({ dark }) => {
       {/* Contact Form */}
       <motion.form
         onSubmit={handleSubmit}
-        className={`p-10 rounded-2xl shadow-xl w-full max-w-md flex flex-col gap-4 border backdrop-blur-md transition-colors ${
-          dark
-            ? "bg-gray-800/70 border-purple-500/40"
-            : "bg-white/80 border-indigo-200/50"
+        className={`p-10 rounded-2xl shadow-xl w-full max-w-md flex flex-col gap-4 border backdrop-blur-md ${
+          dark ? "bg-gray-800/70 border-purple-500/40" : "bg-white/80 border-indigo-200/50"
         }`}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -59,6 +66,7 @@ const Contact = ({ dark }) => {
       >
         <input
           type="text"
+          name="name"
           placeholder="Your Name"
           required
           className={`p-3 rounded-md focus:outline-none transition-colors border ${
@@ -69,6 +77,7 @@ const Contact = ({ dark }) => {
         />
         <input
           type="email"
+          name="email"
           placeholder="Your Email"
           required
           className={`p-3 rounded-md focus:outline-none transition-colors border ${
@@ -78,6 +87,7 @@ const Contact = ({ dark }) => {
           }`}
         />
         <textarea
+          name="message"
           placeholder="Message"
           required
           className={`p-3 rounded-md focus:outline-none transition-colors border ${
@@ -88,6 +98,7 @@ const Contact = ({ dark }) => {
         ></textarea>
 
         <motion.button
+          type="submit"
           className={`py-3 rounded-full font-bold shadow-lg transition-all ${
             dark
               ? "bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 text-gray-900"
@@ -96,22 +107,18 @@ const Contact = ({ dark }) => {
           whileHover={{
             scale: 1.05,
             boxShadow: dark
-              ? "0 0 15px rgba(255, 0, 255, 0.6), 0 0 25px rgba(255, 255, 0, 0.5)"
-              : "0 0 10px rgba(252, 94, 184, 0.3)",
+              ? "0 0 15px rgba(255,0,255,0.6),0 0 25px rgba(255,255,0,0.5)"
+              : "0 0 10px rgba(252,94,184,0.3)",
             transition: { duration: 0.3 },
           }}
           whileTap={{ scale: 0.95 }}
-        > 
+        >
           Send
         </motion.button>
       </motion.form>
 
       {msg && (
-        <p
-          className={`mt-4 transition-colors ${
-            dark ? "text-green-400" : "text-green-700"
-          }`}
-        >
+        <p className={`mt-4 transition-colors ${dark ? "text-green-400" : "text-green-700"}`}>
           {msg}
         </p>
       )}
