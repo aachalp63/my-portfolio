@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import { FaPython,FaReact, FaHtml5, FaCss3Alt, FaJs, FaFigma,FaFileExcel,FaDatabase,FaChartLine,
   FaChartBar,FaAndroid,FaGitAlt,FaGithub,FaPhp,FaCode,FaJava,FaFileCode
  } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
 
 const skills = [
   { name: "Python", icon: <FaPython size={40} /> },
   { name: "React", icon: <FaReact size={40} /> },
   { name: "TailwindCSS", icon: <FaFigma size={40} /> },
   { name: "JavaScript", icon: <FaJs size={40} /> },
+  { name: "MongoDB", icon: <SiMongodb size={40} /> },
   { name: "HTML", icon: <FaHtml5 size={40} /> },
   { name: "CSS", icon: <FaCss3Alt size={40} /> },
   { name: "MS Excel", icon: <FaFileExcel size={40} /> },
@@ -80,6 +82,8 @@ const Skills = ({ dark }) => (
                 ? "text-teal-400"
                 : skill.name === "JavaScript"
                 ? "text-yellow-400"
+                : skill.name === "MongoDB"
+                ? "text-green-500"
                 : skill.name === "HTML"
                 ? "text-orange-500"
                 : skill.name === "Python"
@@ -111,6 +115,8 @@ const Skills = ({ dark }) => (
               ? "text-teal-400"
               : skill.name === "JavaScript"
               ? "text-yellow-400"
+              : skill.name === "MongoDB"
+              ? "text-green-600"
               : skill.name === "HTML"
               ? "text-orange-500"
               : skill.name === "Python"
