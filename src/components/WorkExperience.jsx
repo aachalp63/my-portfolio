@@ -5,7 +5,7 @@ const experiences = [
   {
     company: "Astrax Private Ltd.",
     role: "Front End Intern",
-    duration: "Jan 2025 - Jun 2025",
+    duration: "March 2025 - Jun 2025",
     description: [
       "Developed responsive web pages and UI components using HTML, CSS, JavaScript, Bootstrap, and PHP.",
       "Collaborated with the team to ensure improved customer experience.",
