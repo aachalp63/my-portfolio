@@ -80,7 +80,7 @@ const Skills = ({ dark }) => (
         : "bg-gradient-to-br from-purple-50 via-pink-50 to-yellow-50"
     }`}
   >
-    {/* Floating decorative circles */}
+    {/* Decorative circles */}
     <div
       className={`absolute top-10 left-10 w-48 h-48 rounded-full filter blur-3xl animate-pulse ${
         dark ? "bg-purple-500/20" : "bg-purple-300/40"
@@ -104,16 +104,16 @@ const Skills = ({ dark }) => (
 
     <div className="max-w-6xl mx-auto relative z-10 space-y-14">
       {skillGroups.map((group, groupIndex) => (
-        <div key={groupIndex}>
+        <div key={groupIndex} className="text-center">
           <h3
-            className={`text-2xl font-semibold mb-6 text-center ${
+            className={`text-2xl font-semibold mb-6 ${
               dark ? "text-purple-300" : "text-purple-700"
             }`}
           >
             {group.title}
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 justify-items-center">
             {group.skills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -124,10 +124,10 @@ const Skills = ({ dark }) => (
                     : "0 0 25px 5px rgba(128,0,128,0.4)",
                   transition: { type: "tween", duration: 0.3 },
                 }}
-                className={`flex flex-col items-center justify-center gap-2 rounded-xl shadow-lg p-6 cursor-pointer transition-all ${
+                className={`flex flex-col items-center justify-center gap-2 rounded-xl shadow-lg p-6 cursor-pointer transition-all duration-300 ${
                   dark
-                    ? "bg-gray-800 text-white"
-                    : "bg-white/80 backdrop-blur-md text-black-800"
+                    ? "bg-gray-800 text-white hover:bg-gray-700"
+                    : "bg-white/80 backdrop-blur-md text-black hover:bg-white/90"
                 }`}
               >
                 {React.cloneElement(skill.icon, {
@@ -200,13 +200,8 @@ const Skills = ({ dark }) => (
                       ? dark
                         ? "text-green-500"
                         : "text-green-500"
-                      : skill.name === "Power BI"
-                      ? dark
-                        ? "text-yellow-500"
-                        : "text-yellow-500"
                       : "text-pink-500",
                 })}
-
                 <motion.span
                   whileHover={{ scale: 1.15 }}
                   className={`font-semibold ${
