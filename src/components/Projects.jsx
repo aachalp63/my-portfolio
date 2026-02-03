@@ -5,7 +5,7 @@ const projects = [
   { title: "Portfolio Website", description: "A personal portfolio website built with React and TailwindCSS.", link: "#", image: "/assets/project1.jpg" },
   {title: "PhishNet – Phishing Detection & Awareness Hub",
   description: "A web application built with Next.js and JavaScript that provides AI-driven phishing URL detection, phishing case studies, whitepaper downloads, and employee training quizzes.",
-  link: "#", // replace with live demo or GitHub link if available // replace with your actual image path
+  link: "https://aachalp63-phishnet.vercel.app/", // replace with live demo or GitHub link if available // replace with your actual image path
   },
   {
   title: "Budget Tracker App",
