@@ -6,7 +6,9 @@ const About = ({ dark }) => (
   <section
     id="about"
     className={`min-h-screen px-6 py-20 transition-colors ${
-      dark ? "bg-gray-800" : "bg-gradient-to-r from-purple-50 via-cyan-50 to-blue-50"
+      dark
+        ? "bg-gray-800"
+        : "bg-gradient-to-r from-purple-50 via-cyan-50 to-blue-50"
     }`}
   >
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
@@ -38,58 +40,76 @@ const About = ({ dark }) => (
         >
           About Me
         </h2>
+
         <p
           className={`text-lg md:text-xl leading-relaxed mb-6 ${
             dark ? "text-gray-200" : "text-gray-700"
           }`}
         >
-          Data Analyst with 1.5 years of experience at IPSOS.<br></br>
-          <br></br>
-          <ul>
-            <li>Skilled in{" "} 
-              <span
-            className={`font-semibold ${
-              dark ? "text-pink-400" : "text-pink-500"
-            }`}
-          >
-            data handling, software development, and database management.
-          </span>{" "}</li>
-            <li>Proficient in managing large datasets, performing {" "}
-          <span
-            className={`font-semibold ${
-              dark ? "text-yellow-400" : "text-yellow-500"
-            }`}
-          >
-            data cleaning, transformation, and creating
-              tabulation reports to support actionable insights.
-          </span>{" "}
-            </li>
-          </ul>
-          <br></br>
-          I’m a passionate Frontend Developer focused on building{" "}
+          Software Development Enthusiast with hands-on experience in building
+          scalable web applications using the{" "}
           <span
             className={`font-semibold ${
               dark ? "text-pink-400" : "text-pink-500"
             }`}
           >
-            modern, responsive
-          </span>{" "}
-          web applications with smooth animations and interactive UI. I love transforming designs into{" "}
-          <span
-            className={`font-semibold ${
-              dark ? "text-yellow-400" : "text-yellow-500"
-            }`}
-          >
-            functional, pixel-perfect interfaces
+            MERN stack
           </span>
-          .
+          . I enjoy solving real-world problems through clean code, modular
+          architecture, and efficient data handling.
         </p>
+
+        <ul
+          className={`text-lg md:text-xl leading-relaxed mb-6 list-disc pl-5 ${
+            dark ? "text-gray-200" : "text-gray-700"
+          }`}
+        >
+          <li>
+            Experienced in developing{" "}
+            <span
+              className={`font-semibold ${
+                dark ? "text-yellow-400" : "text-yellow-500"
+              }`}
+            >
+              full-stack web applications
+            </span>{" "}
+            with React, Node.js, Express, and MongoDB, focusing on performance,
+            scalability, and maintainability.
+          </li>
+          <li>
+            Strong foundation in{" "}
+            <span
+              className={`font-semibold ${
+                dark ? "text-pink-400" : "text-pink-500"
+              }`}
+            >
+              RESTful APIs, authentication, database design,
+            </span>{" "}
+            and component-driven UI development.
+          </li>
+          <li>
+            Previously worked as an Executive Data Processing professional at
+            IPSOS, where I strengthened my skills in{" "}
+            <span
+              className={`font-semibold ${
+                dark ? "text-yellow-400" : "text-yellow-500"
+              }`}
+            >
+              data validation, automation, and analytical problem-solving
+            </span>
+            — skills I now apply to backend logic and data-driven systems.
+          </li>
+        </ul>
+
         <p
           className={`text-lg md:text-xl leading-relaxed ${
             dark ? "text-gray-200" : "text-gray-700"
           }`}
         >
-          When I’m not coding, I enjoy learning about the latest web technologies, data anlysis, experimenting with new tools, and contributing to open-source projects.
+          I’m currently pursuing my MCA and actively building projects that
+          combine frontend excellence with robust backend systems. Outside of
+          coding, I enjoy exploring system design concepts, learning new
+          technologies, and contributing to meaningful software solutions.
         </p>
       </motion.div>
     </div>
