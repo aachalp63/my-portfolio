@@ -54,6 +54,14 @@ const About = ({ dark }) => (
             }`}
           >
             MERN stack
+          </span>{" "}
+          as well as server-side development with{" "}
+          <span
+            className={`font-semibold ${
+              dark ? "text-yellow-400" : "text-yellow-500"
+            }`}
+          >
+            PHP
           </span>
           . I enjoy solving real-world problems through clean code, modular
           architecture, and efficient data handling.
@@ -65,7 +73,7 @@ const About = ({ dark }) => (
           }`}
         >
           <li>
-            Experienced in developing{" "}
+            Developing{" "}
             <span
               className={`font-semibold ${
                 dark ? "text-yellow-400" : "text-yellow-500"
@@ -73,8 +81,8 @@ const About = ({ dark }) => (
             >
               full-stack web applications
             </span>{" "}
-            with React, Node.js, Express, and MongoDB, focusing on performance,
-            scalability, and maintainability.
+            using React, Node.js, Express, MongoDB, and PHP, with a focus on
+            performance, scalability, and maintainability.
           </li>
           <li>
             Strong foundation in{" "}
@@ -85,7 +93,8 @@ const About = ({ dark }) => (
             >
               RESTful APIs, authentication, database design,
             </span>{" "}
-            and component-driven UI development.
+            and component-driven UI development across modern and traditional
+            backend stacks.
           </li>
           <li>
             Previously worked as an Executive Data Processing professional at
@@ -97,7 +106,8 @@ const About = ({ dark }) => (
             >
               data validation, automation, and analytical problem-solving
             </span>
-            — skills I now apply to backend logic and data-driven systems.
+            — experience that now supports building reliable backend logic and
+            data-driven systems.
           </li>
         </ul>
 
@@ -107,9 +117,10 @@ const About = ({ dark }) => (
           }`}
         >
           I’m currently pursuing my MCA and actively building projects that
-          combine frontend excellence with robust backend systems. Outside of
-          coding, I enjoy exploring system design concepts, learning new
-          technologies, and contributing to meaningful software solutions.
+          combine frontend excellence with robust backend systems using MERN and
+          PHP-based architectures. Outside of coding, I enjoy exploring system
+          design concepts, learning new technologies, and contributing to
+          meaningful software solutions.
         </p>
       </motion.div>
     </div>
