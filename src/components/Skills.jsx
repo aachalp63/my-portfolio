@@ -92,6 +92,7 @@ const Skills = ({ dark }) => (
       }`}
     ></div>
 
+    {/* Section Heading */}
     <h2
       className={`text-4xl font-bold text-center mb-12 transition-colors ${
         dark
@@ -113,7 +114,7 @@ const Skills = ({ dark }) => (
             {group.title}
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 justify-center">
             {group.skills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -124,7 +125,7 @@ const Skills = ({ dark }) => (
                     : "0 0 25px 5px rgba(128,0,128,0.4)",
                   transition: { type: "tween", duration: 0.3 },
                 }}
-                className={`flex flex-col items-center justify-center gap-2 rounded-xl shadow-lg p-6 cursor-pointer transition-all duration-300 ${
+                className={`flex flex-col items-center justify-center gap-2 rounded-xl shadow-lg p-6 cursor-pointer transition-all duration-300 w-32 sm:w-36 lg:w-40 ${
                   dark
                     ? "bg-gray-800 text-white hover:bg-gray-700"
                     : "bg-white/80 backdrop-blur-md text-black hover:bg-white/90"
@@ -204,7 +205,7 @@ const Skills = ({ dark }) => (
                 })}
                 <motion.span
                   whileHover={{ scale: 1.15 }}
-                  className={`font-semibold ${
+                  className={`font-semibold text-center break-words ${
                     dark ? "text-white" : "text-gray-800"
                   }`}
                 >
