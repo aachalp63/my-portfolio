@@ -13,7 +13,7 @@ const Navbar = ({ dark, toggleTheme }) => (
           dark ? "text-white-400" : "bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400"
         }`}
       >
-        PortFolio
+        Aachal's PortFolio
       </h1>
 
       {/* Nav Links */}
