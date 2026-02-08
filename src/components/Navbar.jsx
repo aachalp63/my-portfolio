@@ -16,12 +16,12 @@ const Navbar = ({ dark, toggleTheme }) => {
       } shadow-md z-50 transition-colors`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-         <div className="flex items-center gap-2">
+         <div className="flex items-baseline gap-2">
         {/* Logo / Name */}
          <img
      src={`${process.env.PUBLIC_URL}/favicon_v1.ico`}
     alt="Aachal Avatar"
-    className="w-8 h-8 object-contain"
+    className="w-8 h-8 object-contain relative top-[1px]"
   />
         <h1
           className={`text-2xl font-bold transition-colors ${
