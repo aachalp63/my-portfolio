@@ -21,7 +21,7 @@ const Navbar = ({ dark, toggleTheme }) => {
          <img
      src={`${process.env.PUBLIC_URL}/favicon_v1.ico`}
     alt="Aachal Avatar"
-    className="w-8 h-8 rounded-full border border-indigo-400"
+    className="w-8 h-8 object-contain"
   />
         <h1
           className={`text-2xl font-bold transition-colors ${
