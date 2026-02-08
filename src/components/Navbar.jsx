@@ -19,7 +19,7 @@ const Navbar = ({ dark, toggleTheme }) => {
          <div className="flex items-center gap-2">
         {/* Logo / Name */}
          <img
-    src="/favicon_v1.ico"
+     src={`${process.env.PUBLIC_URL}/favicon_v1.ico`}
     alt="Aachal Avatar"
     className="w-8 h-8 rounded-full border border-indigo-400"
   />
